@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="src/output.css">
   <title>Benteveo Studio</title>
 </head>
-<body>
+<body class="">
 
   <header class="fixed top-0 max-w-screen w-full text-white text-sm bg-black/90 font-open-sans">
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between p-4">
@@ -19,9 +19,10 @@
       <div class="links-and-theme flex items-center font-bold gap-12">
         <nav>
           <ul class="flex items-center gap-8 uppercase tracking-widest">
-            <li><a href="#" class="hover:text-red-500 transition-colors">Inicio</a></li>
-            <li><a href="#" class="hover:text-red-500 transition-colors">Juegos</a></li>
+            <li><a href="#inicio" class="hover:text-red-500 transition-colors">Inicio</a></li>
+            <li><a href="#juegos" class="hover:text-red-500 transition-colors">Juegos</a></li>
             <li><a href="#" class="hover:text-red-500 transition-colors">Nosotros</a></li>
+            <li><a href="#contacto" class="hover:text-red-500 transition-colors">Contacto</a></li>
           </ul>
         </nav>
         
@@ -32,14 +33,27 @@
     </div>
   </header>
   
-  <section id="hero" class="h-[75vh] max-h-[600px] w-full bg-[url(/src/assets/hero.jpg)] bg-cover">
-    <div class="bg-image h-full w-full bg-black/50 ">
-    </div>
-  </section>
   
-  <main>
-    <section id="slider">
-      <div class="title">
+  <main class="w-full" id="inicio">
+    <section id="hero" class="h-[75vh] max-h-[600px] w-full bg-[url(/src/assets/hero.jpg)] bg-cover">
+      <div class="bg-image h-full w-full bg-black/50 ">
+      </div>
+    </section>
+
+    <section id="juegos" 
+    class="h-auto max-h-[600px] max-w-7xl py-12 px-8 m-auto scroll-mt-18 grid place-items-center gap-12">
+      <div>  
+        <h1 class="text-3xl tracking-tight font-bold">
+          Nuestros juegos <span>destacados</span>
+        </h1>
+      </div>
+
+      <div class="h-[60vh] max-h-[400px] w-full flex bg-red-500 overflow-x-scroll snap-x snap-mandatory">
+        <section class="bg-red-500 min-w-full grid place-items-center snap-center">1</section>
+        <section class="bg-indigo-500 min-w-full grid place-items-center snap-center">2</section>
+        <section class="bg-blue-500 min-w-full grid place-items-center snap-center">3</section>
+      </div>
+      <!-- <div class="title">
         <h1>Nuestros juegos destacados</h1>
         <input type="button" value="Saber mas">
       </div>
@@ -52,23 +66,37 @@
         <input type="radio" name="slider" id="">
         <input type="radio" name="slider" id="">
         <input type="radio" name="slider" id="">
-      </div>
+      </div> -->
     </section>
 
-    <section id="contact">
-      <aside>
-        <img src="#" alt="aside-game">
+    <section id="contacto" 
+    class="h-auto max-h-[600px] max-w-4xl py-12 px-8 m-auto scroll-mt-18 grid grid-cols-3 gap-12">
+      <div class="col-span-3 text-center">
+        <h1 class="font-bold text-3xl">Contactanos!</h1>
+      </div>
+      <aside class="w-full">
+        <img 
+        src="src/assets/aside-contact.png" 
+        alt="aside-game" 
+        class="h-full">
       </aside>
 
-      <div class="form">
-        <form action="">
-          <input type="text" placeholder="Nombre">
-          <input type="text" placeholder="Apellido">
-          <input type="email" placeholder="email">
-          <textarea name="" id=""></textarea>
-          <input type="submit" value="Dejanos tu mensaje">
-        </form>
-      </div>
+      <form action="" class="grid gap-10 col-span-2 w-full text-sm">
+        <input 
+        type="text" 
+        placeholder="Nombre" 
+        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
+        <input 
+        type="text" 
+        placeholder="Apellido" 
+        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
+        <input 
+        type="email" 
+        placeholder="Email" 
+        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
+        <textarea name="" id="" class="px-6 py-3 rounded-xl outline-1 outline-gray-800 min-h-20"></textarea>
+        <input type="submit" value="Dejanos tu mensaje">
+      </form>
     </section>
   </main>
 
