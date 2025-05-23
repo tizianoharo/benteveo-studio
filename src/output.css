@@ -19,6 +19,7 @@
   --color-pink-500: oklch(65.6% 0.241 354.308);
   --color-gray-400: oklch(70.7% 0.022 261.325);
   --color-gray-800: oklch(27.8% 0.033 256.848);
+  --color-gray-900: oklch(21% 0.034 264.665);
   --color-black: #000;
   --color-white: #fff;
   --spacing: 0.25rem;
@@ -28,13 +29,18 @@
   --container-4xl: 56rem;
   --container-5xl: 64rem;
   --container-7xl: 80rem;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: calc(1 / 0.75);
   --text-sm: 0.875rem;
   --text-sm--line-height: calc(1.25 / 0.875);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
   --text-2xl: 1.5rem;
   --text-2xl--line-height: calc(2 / 1.5);
   --text-3xl: 1.875rem;
   --text-3xl--line-height: calc(2.25 / 1.875);
   --font-weight-bold: 700;
+  --font-weight-black: 900;
   --tracking-tighter: -0.05em;
   --tracking-tight: -0.025em;
   --tracking-widest: 0.1em;
@@ -207,8 +213,20 @@
   .col-span-3 {
     grid-column: span 3 / span 3;
   }
+  .m-8 {
+    margin: calc(var(--spacing) * 8);
+  }
   .m-auto {
     margin: auto;
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .flex {
     display: flex;
@@ -351,14 +369,23 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
@@ -425,6 +452,9 @@
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
   .bg-indigo-500 {
     background-color: var(--color-indigo-500);
   }
@@ -470,6 +500,9 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -511,9 +544,21 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
