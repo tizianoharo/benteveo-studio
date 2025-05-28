@@ -7,32 +7,33 @@
   <link rel="stylesheet" href="src/output.css">
   <title>Benteveo Studio</title>
 </head>
-<body class="min-h-svh flex flex-col">
+<body class="min-h-svh flex flex-col font-manrope text-default">
 
-  <header class="fixed top-0 max-w-screen w-full text-white text-sm bg-black/90 font-open-sans">
-    <div class="secondary-header max-w-7xl m-auto flex items-center justify-between p-4">
+  <header class="sticky top-0 max-w-screen w-full text-sm bg-white py-3">
+    <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
-        <img class="max-w-10" src="src/assets/icon.png" alt="BS-logo" draggable="false">
-        <h1 class="text-2xl tracking-tighter">Benteveo Studio</h1>
+        <img class="max-w-10 object-contain" src="src/assets/icon.png" alt="BS-logo" draggable="false">
+        <h1 class="text-2xl text-blue-950 tracking-tighter">
+          Benteveo <span class="text-amber-600">Studio</span>
+        </h1>
       </div>
   
-      <div class="links-and-theme flex items-center font-bold gap-12">
+      <div class="links-and-theme flex items-center gap-12">
         <nav>
-          <ul class="flex items-center gap-8 uppercase tracking-widest">
-            <li><a href="#inicio" class="hover:text-red-500 transition-colors">Inicio</a></li>
-            <li><a href="#juegos" class="hover:text-red-500 transition-colors">Juegos</a></li>
-            <li><a href="#" class="hover:text-red-500 transition-colors">Nosotros</a></li>
-            <li><a href="#contacto" class="hover:text-red-500 transition-colors">Contacto</a></li>
+          <ul class="flex items-center gap-8 font-medium">
+            <li><a href="#" class="hover:text-links transition-colors">Inicio</a></li>
+            <li><a href="#" class="hover:text-links transition-colors">Juegos</a></li>
+            <li><a href="#" class="hover:text-links transition-colors">Nosotros</a></li>
+            <li><a href="#" class="hover:text-links transition-colors">Contacto</a></li>
           </ul>
         </nav>
         
-        <button class="theme">
-          <svg  xmlns="http://www.w3.org/2000/svg"  width="25"  height="25"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+        <button class="theme cursor-pointer border p-1 rounded hover:bg-themeBtn hover:text-white transition-colors">
+          <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
         </button>
       </div>
     </div>
   </header>
-  
   
   <main class="w-full flex-1/2" id="inicio">
     <section id="hero" class="h-[75vh] max-h-[600px] w-full bg-[url(/src/assets/hero.jpg)] bg-cover">
@@ -44,7 +45,7 @@
     class="h-auto max-h-[600px] max-w-7xl py-12 px-8 m-auto scroll-mt-18 grid place-items-center gap-12">
       <div>  
         <h1 class="text-3xl tracking-tight font-bold">
-          Nuestros juegos <span>destacados</span>
+          Nuestros juegos
         </h1>
       </div>
 
@@ -53,20 +54,6 @@
         <section class="bg-indigo-500 min-w-full grid place-items-center snap-center">2</section>
         <section class="bg-blue-500 min-w-full grid place-items-center snap-center">3</section>
       </div>
-      <!-- <div class="title">
-        <h1>Nuestros juegos destacados</h1>
-        <input type="button" value="Saber mas">
-      </div>
-
-      <div class="game-img-bg">
-      </div>
-      
-      <div class="radio-inputs">
-        <input type="radio" name="slider" checked>
-        <input type="radio" name="slider" id="">
-        <input type="radio" name="slider" id="">
-        <input type="radio" name="slider" id="">
-      </div> -->
     </section>
 
     <section id="contacto" 
