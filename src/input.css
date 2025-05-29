@@ -2,10 +2,46 @@
 
 * {
   scroll-behavior: smooth;
-  font-family: 'Manrope', serif;
+}
+
+@keyframes alternate-colors {
+  0% {
+    color: red;
+  }
+
+  50% {
+    color: yellow;
+  }
+  
+  100% {
+    color: #0ec09a;
+  }
+}
+
+@keyframes show-content {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .info-game .content {
+  animation-delay: 5s;
+  animation: show-content 1s linear;
+} */
+
+.tag-game {
+  animation: alternate-colors 1.5s alternate infinite;
 }
 
 @theme {
+  /* Fuentes */
+  --font-manrope: 'Manrope', serif;
+  --font-open-sans: 'Open Sans', serif;
+
   /* Colores */
   --color-themeBtn: #000A2BFF; 
   --color-links: #09876BFF;

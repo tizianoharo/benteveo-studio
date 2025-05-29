@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="src/output.css">
   <title>Benteveo Studio</title>
 </head>
-<body class="min-h-svh flex flex-col font-manrope text-default">
+<body class="min-h-svh flex flex-col text-default font-manrope">
 
   <header class="sticky top-0 max-w-screen w-full text-sm bg-white py-3">
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
@@ -36,15 +36,33 @@
   </header>
   
   <main class="w-full flex-1/2" id="inicio">
-    <section id="hero" class="h-[75vh] max-h-[600px] w-full bg-[url(/src/assets/hero.jpg)] bg-cover">
-      <div class="bg-image h-full w-full bg-black/50 ">
+    <section id="hero" 
+    class="h-[75svh] max-h-[500px] w-full bg-black">
+      <div class="grid grid-cols-4 h-full w-full w-vh max-w-[1400px] m-auto">
+        <div class="image-game col-span-3 bg-[url(/src/assets/game-1.jpg)] bg-cover bg-no-repeat">
+        </div>
+
+        <aside class="info-game font-bold bg-black text-white grid place-items-center">
+          <div class="content p-4 w-4/5">
+            <span class="tag-game text-sm text-green-400">Nuevo</span>
+            <h1 class="text-5xl mb-4">
+              Magpie
+            </h1>
+            <p class="mb-12">
+              En desarollo...
+            </p>
+            <button class="bg-links text-xl border border-black px-10 py-3 rounded-md hover:bg-black hover:border-white transition-colors cursor-pointer">
+              Saber más
+            </button>
+          </div>
+        </aside>
       </div>
     </section>
 
     <section id="juegos" 
     class="h-auto max-h-[600px] max-w-7xl py-12 px-8 m-auto scroll-mt-18 grid place-items-center gap-12">
       <div>  
-        <h1 class="text-3xl tracking-tight font-bold">
+        <h1 class="headingjuegos text-3xl tracking-tight font-bold">
           Nuestros juegos
         </h1>
       </div>
