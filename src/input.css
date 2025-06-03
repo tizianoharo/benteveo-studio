@@ -15,6 +15,13 @@
   --color-default: #212121;
 }
 
+@layer {
+  .section {
+    @apply w-full h-svh max-h-[650px] text-center snap-center;
+  }
+}
 
-
+html {
+  scroll-snap-type: y proximity;
+}
 @import "tailwindcss"

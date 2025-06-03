@@ -9,7 +9,7 @@
 </head>
 <body class="min-h-svh flex flex-col text-default font-manrope">
 
-  <header class="sticky top-0 max-w-screen w-full text-sm bg-white py-3 z-10">
+  <header class="max-w-screen w-full text-sm bg-white py-3 z-10 snap-start">
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
         <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
@@ -39,28 +39,28 @@
     </div>
   </header>
   
-  <main class="w-full flex-1/2" id="inicio">
+  <main id="inicio" class="bg-red-500">
     <section id="hero"
     class="h-[75svh] max-h-[500px] w-full bg-black">
       <div class="h-full max-w-[1980px] m-auto">
       </div>
     </section>
-
-    <section>
-      <h1>¿Qué hacemos? ¿Quienes somos?</h1>
+    
+    <section class="section">
+      <h1>Conocenos</h1>
     </section>
-
-    <section>
+    
+    <section class="section bg-gray-100">
       <h1>Servicios</h1>
     </section>
 
-    <section>
+    <section class="section">
       <h1>Contacto</h1>
     </section>
 
   </main>
 
-  <footer class="bg-gray-900 max-w-screen w-full text-white px-16 py-6">
+  <footer class="bg-gray-900 max-w-screen w-full text-white px-16 py-6 snap-start">
     <div class="max-w-7xl w-full m-auto grid gap-3">
 
       <div class="title">
@@ -90,8 +90,5 @@
       </div>
     </div>
   </footer>
-
-  <script src="src/slider.js"></script>
-
 </body>
 </html>
