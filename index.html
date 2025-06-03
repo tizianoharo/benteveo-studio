@@ -9,100 +9,55 @@
 </head>
 <body class="min-h-svh flex flex-col text-default font-manrope">
 
-  <header class="sticky top-0 max-w-screen w-full text-sm bg-white py-3">
+  <header class="sticky top-0 max-w-screen w-full text-sm bg-white py-3 z-10">
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
-        <img class="max-w-10 object-contain" src="src/assets/icon.png" alt="BS-logo" draggable="false">
-        <h1 class="text-2xl text-blue-950 tracking-tighter">
+        <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
+        <h1 class="text-2xl text-blue-950 tracking-tighter cursor-pointer">
           Benteveo <span class="text-amber-600">Studio</span>
         </h1>
       </div>
   
       <div class="links-and-theme flex items-center gap-12">
         <nav>
-          <ul class="flex items-center gap-8 font-medium">
+          <ul class="flex items-center gap-12 font-medium">
             <li><a href="#" class="hover:text-links transition-colors">Inicio</a></li>
-            <li><a href="#" class="hover:text-links transition-colors">Juegos</a></li>
+            <li><a href="#" class="hover:text-links transition-colors">Tienda</a></li>
             <li><a href="#" class="hover:text-links transition-colors">Nosotros</a></li>
-            <li><a href="#" class="hover:text-links transition-colors">Contacto</a></li>
           </ul>
         </nav>
         
-        <button class="theme cursor-pointer border p-1 rounded hover:bg-themeBtn hover:text-white transition-colors">
-          <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
-        </button>
+        <div class="flex items-center gap-4">
+          <button class="theme cursor-pointer border p-1 rounded hover:bg-themeBtn hover:text-white transition-colors">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+          </button>
+          <button class="login cursor-pointer border px-3 py-1 font-bold rounded hover:bg-themeBtn hover:text-white transition-colors">
+            Inicia sesion
+          </button>
+        </div>
       </div>
     </div>
   </header>
   
   <main class="w-full flex-1/2" id="inicio">
-    <section id="hero" 
+    <section id="hero"
     class="h-[75svh] max-h-[500px] w-full bg-black">
-      <div class="grid grid-cols-4 h-full w-full w-vh max-w-[1400px] m-auto">
-        <div class="image-game col-span-3 bg-[url(/src/assets/game-1.jpg)] bg-cover bg-no-repeat">
-        </div>
-
-        <aside class="info-game font-bold bg-black text-white grid place-items-center">
-          <div class="content p-4 w-4/5">
-            <span class="tag-game text-sm text-green-400">Nuevo</span>
-            <h1 class="text-5xl mb-4">
-              Magpie
-            </h1>
-            <p class="mb-12">
-              En desarollo...
-            </p>
-            <button class="bg-links text-xl border border-black px-10 py-3 rounded-md hover:bg-black hover:border-white transition-colors cursor-pointer">
-              Saber más
-            </button>
-          </div>
-        </aside>
+      <div class="h-full max-w-[1980px] m-auto">
       </div>
     </section>
 
-    <section id="juegos" 
-    class="h-auto max-h-[600px] max-w-7xl py-12 px-8 m-auto scroll-mt-18 grid place-items-center gap-12">
-      <div>  
-        <h1 class="headingjuegos text-3xl tracking-tight font-bold">
-          Nuestros juegos
-        </h1>
-      </div>
-
-      <div class="h-[60vh] max-h-[400px] w-full flex bg-red-500 overflow-x-scroll snap-x snap-mandatory">
-        <section class="bg-red-500 min-w-full grid place-items-center snap-center">1</section>
-        <section class="bg-indigo-500 min-w-full grid place-items-center snap-center">2</section>
-        <section class="bg-blue-500 min-w-full grid place-items-center snap-center">3</section>
-      </div>
+    <section>
+      <h1>¿Qué hacemos? ¿Quienes somos?</h1>
     </section>
 
-    <section id="contacto" 
-    class="h-auto max-h-[600px] max-w-4xl py-12 px-8 m-auto scroll-mt-18 grid grid-cols-3 gap-12">
-      <div class="col-span-3 text-center">
-        <h1 class="font-bold text-3xl">Contactanos!</h1>
-      </div>
-      <aside class="w-full">
-        <img 
-        src="src/assets/aside-contact.png" 
-        alt="aside-game" 
-        class="h-full">
-      </aside>
-
-      <form action="" class="grid gap-10 col-span-2 w-full text-sm">
-        <input 
-        type="text" 
-        placeholder="Nombre" 
-        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
-        <input 
-        type="text" 
-        placeholder="Apellido" 
-        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
-        <input 
-        type="email" 
-        placeholder="Email" 
-        class="px-6 py-7 rounded-xl outline-1 outline-gray-800 bg-white max-h-10">
-        <textarea name="" id="" class="px-6 py-3 rounded-xl outline-1 outline-gray-800 min-h-20"></textarea>
-        <input type="submit" value="Dejanos tu mensaje">
-      </form>
+    <section>
+      <h1>Servicios</h1>
     </section>
+
+    <section>
+      <h1>Contacto</h1>
+    </section>
+
   </main>
 
   <footer class="bg-gray-900 max-w-screen w-full text-white px-16 py-6">
@@ -135,6 +90,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="src/slider.js"></script>
 
 </body>
 </html>

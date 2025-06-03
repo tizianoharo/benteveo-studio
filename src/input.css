@@ -4,39 +4,6 @@
   scroll-behavior: smooth;
 }
 
-@keyframes alternate-colors {
-  0% {
-    color: red;
-  }
-
-  50% {
-    color: yellow;
-  }
-  
-  100% {
-    color: #0ec09a;
-  }
-}
-
-@keyframes show-content {
-  0% {
-    opacity: 0;
-  }
-  
-  100% {
-    opacity: 1;
-  }
-}
-
-/* .info-game .content {
-  animation-delay: 5s;
-  animation: show-content 1s linear;
-} */
-
-.tag-game {
-  animation: alternate-colors 1.5s alternate infinite;
-}
-
 @theme {
   /* Fuentes */
   --font-manrope: 'Manrope', serif;
