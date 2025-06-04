@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,31 +8,31 @@
   <link rel="stylesheet" href="src/output.css">
   <title>Benteveo Studio</title>
 </head>
-<body class="min-h-svh flex flex-col text-default font-manrope">
 
-  <header class="max-w-screen w-full text-sm bg-white py-3 z-10 snap-start">
+<body class="min-h-svh flex flex-col text-default font-manrope">
+  <header class="max-w-screen w-full px-6 text-sm bg-white py-3 z-10 snap-start">
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
         <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
-        <h1 class="text-2xl text-blue-950 tracking-tighter cursor-pointer">
-          Benteveo <span class="text-amber-600">Studio</span>
+        <h1 class="text-2xl text-dark-blue tracking-tighter cursor-pointer">
+          Benteveo <span class="text-orange">Studio</span>
         </h1>
       </div>
   
       <div class="links-and-theme flex items-center gap-12">
         <nav>
           <ul class="flex items-center gap-12 font-medium">
-            <li><a href="#" class="hover:text-links transition-colors">Inicio</a></li>
-            <li><a href="#" class="hover:text-links transition-colors">Tienda</a></li>
-            <li><a href="#" class="hover:text-links transition-colors">Nosotros</a></li>
+            <li><a href="#" class="hover:text-mid-green transition-colors">Inicio</a></li>
+            <li><a href="#" class="hover:text-mid-green transition-colors">Tienda</a></li>
+            <li><a href="#" class="hover:text-mid-green transition-colors">Nosotros</a></li>
           </ul>
         </nav>
         
         <div class="flex items-center gap-4">
-          <button class="theme cursor-pointer border p-1 rounded hover:bg-themeBtn hover:text-white transition-colors">
+          <button class="theme cursor-pointer border p-1 rounded hover:bg-dark-blue hover:text-white transition-colors">
             <svg  xmlns="http://www.w3.org/2000/svg"  width="20"  height="20"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
           </button>
-          <button class="login cursor-pointer border px-3 py-1 font-bold rounded hover:bg-themeBtn hover:text-white transition-colors">
+          <button class="login cursor-pointer border px-3 py-1 font-bold rounded hover:bg-dark-blue hover:text-white transition-colors">
             Inicia sesion
           </button>
         </div>
@@ -39,28 +40,69 @@
     </div>
   </header>
   
-  <main id="inicio" class="bg-red-500">
+  <main id="inicio" class="">
     <section id="hero"
-    class="h-[75svh] max-h-[500px] w-full bg-black">
-      <div class="h-full max-w-[1980px] m-auto">
+    class="relative h-[90svh] max-h-[650px] w-full">
+      <div class="h-full max-w-[1980px] m-auto text-center grid place-items-center gap-30">
+        <div class="max-w-5xl grid gap-8">
+          <h1 class="font-bold text-6xl">
+            Desarrolladora de videojuegos
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, maiores, ut molestiae odit aperiam, odio in id quae laborum velit magnam ea voluptate iusto iure cumque vel quaerat. Deserunt, earum!
+          </p>
+
+          <a href="#contacto" class="border border-dark-blue rounded bg-orange text-black font-semibold w-fit px-8 py-2 m-auto cursor-pointer hover:scale-105 hover:bg-orange/80 transition-all">
+            Contactanos!
+          </a>
+        </div>
+
+        <div class="absolute bottom-0 rounded-t-2xl bg-gradient-to-b from-dark-blue/80 to-dark-blue text-white px-16 py-4 grid gap-2 place-items-center">
+          <div class="flex gap-12">
+            <div class=""> 
+              Calidad?
+            </div>
+  
+            <div class="">
+              Compromiso?
+            </div>
+  
+            <div class="">
+              Atencion?
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- <div class="second-header sticky top-1 text-sm bg-mid-blue w-full">
+      <div class="sub-header max-w-[600px] w-full m-auto h-12 flex justify-center items-center">
+        <nav>
+          <ul class="flex gap-12 text-white">
+            <li><a href="#">Conocenos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div> -->
     
-    <section class="section">
+    <section id="inicio" class="section py-24 px-9">
       <h1>Conocenos</h1>
     </section>
     
-    <section class="section bg-gray-100">
+    <section id="servicios" class="section bg-white text-black p-10">
       <h1>Servicios</h1>
     </section>
 
-    <section class="section">
+    <section id="contacto" class="section p-10">
       <h1>Contacto</h1>
     </section>
 
   </main>
 
-  <footer class="bg-gray-900 max-w-screen w-full text-white px-16 py-6 snap-start">
+  <footer class="bg-gray-900 max-w-full w-full text-white px-16 py-6 snap-start">
     <div class="max-w-7xl w-full m-auto grid gap-3">
 
       <div class="title">
@@ -91,4 +133,5 @@
     </div>
   </footer>
 </body>
+
 </html>
