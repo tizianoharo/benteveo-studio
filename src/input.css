@@ -17,25 +17,26 @@
   --color-mid-green: #09876BFF;
 }
 
-@layer {
-  .section {
-    @apply bg-dark-blue w-full h-svh max-h-[650px] text-white text-center snap-center;
-  }
-}
-
-@keyframes change-color {
+@keyframes border-header {
   0% {
-    color: red;
-  }
-  50% {
-    color: var(--color-links);
+    border: solid 1px transparent;
   }
   100% {
-    color: var(--color-themeBtn);
+    border-bottom: solid 1px black;
+    padding: 12px 0;
   }
 }
 
-html {
-  scroll-snap-type: y mandatory;
+header {
+  animation: border-header forwards;
+  animation-timeline: scroll();
+  animation-range: 10% 20%
 }
+
+@layer {
+  .section {
+    @apply bg-dark-blue w-full h-svh max-h-[650px] text-white text-center snap-center scroll-mt-16;
+  }
+}
+
 @import "tailwindcss"

@@ -10,7 +10,8 @@
 </head>
 
 <body class="min-h-svh flex flex-col text-default font-manrope">
-  <header class="max-w-screen w-full px-6 text-sm bg-white py-3 z-10 snap-start">
+  <header class="sticky top-0 max-w-screen w-full px-6 text-sm bg-white py-6 z-10 snap-start">
+
     <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
         <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
@@ -38,26 +39,28 @@
         </div>
       </div>
     </div>
+    
   </header>
   
-  <main id="inicio" class="">
+  <main id="inicio" class="relative">
+
     <section id="hero"
-    class="relative h-[90svh] max-h-[650px] w-full">
-      <div class="h-full max-w-[1980px] m-auto text-center grid place-items-center gap-30">
+    class="relative h-[85svh] max-h-[650px] w-full">
+      <div class="h-full max-w-[1980px] m-auto text-center grid place-items-center">
         <div class="max-w-5xl grid gap-8">
           <h1 class="font-bold text-6xl">
             Desarrolladora de videojuegos
           </h1>
-
+  
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, maiores, ut molestiae odit aperiam, odio in id quae laborum velit magnam ea voluptate iusto iure cumque vel quaerat. Deserunt, earum!
           </p>
-
+  
           <a href="#contacto" class="border border-dark-blue rounded bg-orange text-black font-semibold w-fit px-8 py-2 m-auto cursor-pointer hover:scale-105 hover:bg-orange/80 transition-all">
             Contactanos!
           </a>
         </div>
-
+  
         <div class="absolute bottom-0 rounded-t-2xl bg-gradient-to-b from-dark-blue/80 to-dark-blue text-white px-16 py-4 grid gap-2 place-items-center">
           <div class="flex gap-12">
             <div class=""> 
@@ -76,27 +79,25 @@
       </div>
     </section>
 
-    <!-- <div class="second-header sticky top-1 text-sm bg-mid-blue w-full">
-      <div class="sub-header max-w-[600px] w-full m-auto h-12 flex justify-center items-center">
-        <nav>
-          <ul class="flex gap-12 text-white">
-            <li><a href="#">Conocenos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
+    <!-- <div class="sub-header text-sm sticky top-18 rounded bg-black/50 backdrop-blur max-w-2xl w-full m-auto h-12 flex justify-center items-center">
+      <nav>
+        <ul class="flex gap-12 text-white">
+          <li><a href="#conocenos">Conocenos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </div> -->
     
-    <section id="inicio" class="section py-24 px-9">
+    <section id="conocenos" class="section py-24 px-9">
       <h1>Conocenos</h1>
     </section>
     
-    <section id="servicios" class="section bg-white text-black p-10">
+    <section id="servicios" class="section bg-white text-black py-24 px-9">
       <h1>Servicios</h1>
     </section>
 
-    <section id="contacto" class="section p-10">
+    <section id="contacto" class="section py-24 px-9">
       <h1>Contacto</h1>
     </section>
 
