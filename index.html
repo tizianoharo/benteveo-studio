@@ -12,12 +12,15 @@
 <body class="min-h-svh flex flex-col text-default font-manrope">
   <header class="sticky top-0 max-w-screen w-full px-6 text-sm bg-white py-6 z-10 snap-start">
 
-    <div class="secondary-header max-w-7xl m-auto flex items-center justify-between">
+    <div class="max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
-        <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
-        <h1 class="text-2xl text-dark-blue tracking-tighter cursor-pointer">
-          Benteveo <span class="text-orange">Studio</span>
-        </h1>
+        <a href="#">
+          <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
+        </a>
+
+        <a href="#" class="text-2xl text-dark-blue tracking-tighter cursor-pointer">
+          Benteveo <span class="text-orange">Studio</span> 
+        </a>
       </div>
   
       <div class="links-and-theme flex items-center gap-12">
@@ -42,7 +45,7 @@
     
   </header>
   
-  <main id="inicio" class="relative">
+  <main id="inicio">
 
     <section id="hero"
     class="relative h-[85svh] max-h-[650px] w-full">
@@ -79,35 +82,41 @@
       </div>
     </section>
 
-    <!-- <div class="sub-header text-sm sticky top-18 rounded bg-black/50 backdrop-blur max-w-2xl w-full m-auto h-12 flex justify-center items-center">
-      <nav>
-        <ul class="flex gap-12 text-white">
-          <li><a href="#conocenos">Conocenos</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </nav>
-    </div> -->
-    
-    <section id="conocenos" class="section py-24 px-9">
-      <h1>Conocenos</h1>
-    </section>
-    
-    <section id="servicios" class="section bg-white text-black py-24 px-9">
-      <h1>Servicios</h1>
-    </section>
-
-    <section id="contacto" class="section py-24 px-9">
-      <h1>Contacto</h1>
-    </section>
+    <div id="sections" class="relative">
+      <div class="bg-subheader absolute top-0 bg-dark-blue h-12 w-full">
+      </div>
+      <div class="sub-header text-sm sticky top-18 rounded bg-dark-blue/50 backdrop-blur max-w-2xl w-full m-auto h-12 flex justify-center items-center">
+        <nav>
+          <ul class="flex gap-12 text-white">
+            <li><a href="#conocenos">Conocenos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      
+      <section id="conocenos" class="section py-24 px-9">
+        <h1>Conocenos</h1>
+      </section>
+      
+      <section id="servicios" class="section bg-white text-black py-24 px-9">
+        <h1>Servicios</h1>
+      </section>
+  
+      <section id="contacto" class="section py-24 px-9">
+        <h1>Contacto</h1>
+      </section>
+    </div>
 
   </main>
 
   <footer class="bg-gray-900 max-w-full w-full text-white px-16 py-6 snap-start">
-    <div class="max-w-7xl w-full m-auto grid gap-3">
 
-      <div class="title">
-        <h1 class="text-2xl font-bold">Benteveo Studio</h1>
+    <div class="max-w-7xl w-full m-auto grid gap-3">
+      <div class="nombre-empresa">
+        <h1 class="text-2xl font-bold">
+          Benteveo Studio
+        </h1>
       </div>
   
       <nav class="nav-footer">
@@ -132,6 +141,7 @@
         </nav>
       </div>
     </div>
+
   </footer>
 </body>
 

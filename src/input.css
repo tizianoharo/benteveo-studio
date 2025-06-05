@@ -10,14 +10,14 @@
   --font-open-sans: 'Open Sans', serif;
 
   /* Colores */
-  --color-orange: #e4a736;
   --color-default: #212121;
+  --color-orange: #e4a736;
   --color-mid-blue: #081538; 
   --color-dark-blue: #00071b; 
   --color-mid-green: #09876BFF;
 }
 
-@keyframes border-header {
+@keyframes change-header {
   0% {
     border: solid 1px transparent;
   }
@@ -28,7 +28,7 @@
 }
 
 header {
-  animation: border-header forwards;
+  animation: change-header forwards;
   animation-timeline: scroll();
   animation-range: 10% 20%
 }
