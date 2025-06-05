@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
   scroll-behavior: smooth;
@@ -8,13 +8,16 @@
   /* Fuentes */
   --font-manrope: 'Manrope', serif;
   --font-open-sans: 'Open Sans', serif;
+  --font-poppins: 'Poppins', serif;
 
   /* Colores */
   --color-default: #212121;
   --color-orange: #e4a736;
   --color-mid-blue: #081538; 
-  --color-dark-blue: #00071b; 
-  --color-mid-green: #09876BFF;
+  --color-dark-blue: #000c2b;
+  --color-mid-green: #4fa86e;
+
+  --container-8xl: 1440px;
 }
 
 @keyframes change-header {
@@ -26,6 +29,11 @@
     padding: 12px 0;
   }
 }
+@keyframes show-section {
+  to {
+    background-color: #000c2bb1;
+  }
+}
 
 header {
   animation: change-header forwards;
@@ -33,9 +41,19 @@ header {
   animation-range: 10% 20%
 }
 
+.bg-conocenos {
+  animation: show-section 1s forwards;
+  animation-timeline: scroll();
+  animation-range: 15% 30%;
+}
+
 @layer {
   .section {
     @apply bg-dark-blue w-full h-svh max-h-[650px] text-white text-center snap-center scroll-mt-16;
+  }
+
+  .button {
+    @apply bg-black text-white font-semibold w-fit m-auto cursor-pointer hover:bg-transparent transition-colors;
   }
 }
 
