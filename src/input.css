@@ -20,6 +20,32 @@
   --container-8xl: 1440px;
 }
 
+@layer {
+  .section {
+    @apply bg-dark-blue w-full h-svh max-h-[700px] text-white text-center snap-center scroll-mt-16;
+  }
+
+  .button {
+    @apply bg-black text-white font-semibold w-fit m-auto cursor-pointer hover:bg-transparent transition-colors;
+  }
+}
+
+@keyframes show-section {
+  to {
+    background-color: #000c2bb1;
+  }
+}
+@keyframes change-color {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: yellow;
+  }
+}
 @keyframes change-header {
   0% {
     border: solid 1px transparent;
@@ -29,32 +55,21 @@
     padding: 12px 0;
   }
 }
-@keyframes show-section {
-  to {
-    background-color: #000c2bb1;
-  }
-}
-
-header {
-  animation: change-header forwards;
-  animation-timeline: scroll();
-  animation-range: 10% 20%
-}
 
 .bg-conocenos {
   animation: show-section 1s forwards;
   animation-timeline: scroll();
-  animation-range: 15% 30%;
+  animation-range: 15% 25%;
 }
 
-@layer {
-  .section {
-    @apply bg-dark-blue w-full h-svh max-h-[650px] text-white text-center snap-center scroll-mt-16;
-  }
+.info h1 span svg {
+  animation: change-color 3s infinite alternate;
+}
 
-  .button {
-    @apply bg-black text-white font-semibold w-fit m-auto cursor-pointer hover:bg-transparent transition-colors;
-  }
+header {
+  animation: change-header 1s forwards;
+  animation-timeline: scroll();
+  animation-range: 10% 20%;
 }
 
 @import "tailwindcss"
