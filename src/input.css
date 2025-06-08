@@ -15,18 +15,22 @@
   --color-orange: #e4a736;
   --color-mid-blue: #081538; 
   --color-dark-blue: #000c2b;
-  --color-mid-green: #4fa86e;
+  --color-mid-green: #50ddab;
 
   --container-8xl: 1440px;
 }
 
 @layer {
   .section {
-    @apply bg-dark-blue w-full h-svh max-h-[700px] text-white text-center snap-center scroll-mt-16;
+    @apply bg-dark-blue w-full h-svh max-h-[700px] text-white snap-center scroll-mt-16 grid place-items-center;
   }
 
   .button {
     @apply bg-black text-white font-semibold w-fit m-auto cursor-pointer hover:bg-transparent transition-colors;
+  }
+
+  .field-form {
+    @apply flex flex-col gap-1;
   }
 }
 

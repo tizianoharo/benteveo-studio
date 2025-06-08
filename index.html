@@ -95,7 +95,7 @@
         </nav>
       </div>
       
-      <section id="conocenos" class="section bg-[url(/src/assets/bg-conocenos.jpg)] bg-cover bg-no-repeat bg-fixed border border-black">
+      <section id="conocenos" class="section bg-[url(/src/assets/bg-conocenos.jpg)] bg-cover bg-no-repeat bg-fixed">
         <div class="bg-conocenos backdrop-blur bg-dark-blue h-full w-full grid place-items-center">
           <div class="w-full max-w-8xl flex justify-center items-center p-8 gap-8">
             <div class="image">
@@ -127,9 +127,9 @@
         </div>
       </section>
       
-      <section id="servicios" class="section bg-white text-default grid place-items-center py-24">
+      <section id="servicios" class="section bg-white text-default py-24">
         <div class="w-full max-w-8xl h-full flex justify-between">
-          <div class="info h-full text-left">
+          <div class="info h-full">
             <h1 class="text-8xl text-black font-semibold mb-4">
               <span class="flex">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" >
@@ -166,8 +166,30 @@
         </div>
       </section>
   
-      <section id="contacto" class="section py-24 px-9 border border-black">
-        <h1>Contacto</h1>
+      <section id="contacto" class="section bg-gradient-to-br from-violet-600 via-blue-400 to-green-300 py-24 px-9">
+        <form action="" class="w-full max-w-xl text-sm text-black grid gap-4">
+          <h1 class="font-semibold uppercase text-3xl text-center mb-4">
+            Contactanos
+          </h1>
+          
+          <div class="field-form">
+            <label for="nombre" class="w-fit">Nombre</label>
+            <input type="text" id="nombre" required class="border border-black/80 px-4 py-3 text-xs rounded ">
+          </div>
+
+          <div class="field-form">
+            <label for="email" class="w-fit">Correo electronico</label>
+            <input type="email" id="email" required class="border border-black/80 px-4 py-3 text-xs rounded ">
+          </div>
+          
+          <div class="field-form">
+            <label for="mensaje" class="w-fit">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" rows="6" placeholder="Dejanos tu mensaje" class="border border-black/80 min-h-28 max-h-32 px-4 py-3 text-xs rounded "></textarea>
+          </div>
+          
+          <input type="submit" value="Enviar" class="border border-black/40 bg-mid-green py-2 cursor-pointer">
+          <div></div>
+        </form>
       </section>
     </div>
 
