@@ -9,16 +9,16 @@
   <title>Benteveo Studio</title>
 </head>
 
-<body class="min-h-svh flex flex-col text-default font-manrope">
-  <header class="sticky top-0 max-w-screen w-full px-6 text-sm bg-white py-6 z-10 snap-start">
+<body class="min-h-svh flex flex-col text-default font-manrope bg-default-bg">
+  <header class="sticky top-0 bg-default-bg max-w-screen w-full px-6 text-sm py-5 z-10 snap-start">
 
     <div class="max-w-7xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
         <a href="#">
-          <img class="max-w-10 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
+          <img class="max-w-8 object-contain cursor-pointer" src="src/assets/icon.png" alt="BS-logo" draggable="false">
         </a>
 
-        <a href="#" class="text-2xl text-dark-blue tracking-tighter cursor-pointer">
+        <a href="#" class="text-xl text-dark-blue tracking-tighter cursor-pointer">
           Benteveo <span class="text-orange">Studio</span> 
         </a>
       </div>
@@ -48,9 +48,10 @@
   <main id="inicio">
 
     <section id="hero"
-    class="relative bg-white h-[85svh] max-h-[650px] w-full">
-      <div class="h-full max-w-[1980px] m-auto text-center grid place-items-center">
-        <div class="max-w-5xl grid gap-8">
+      class="relative h-[85svh] max-h-[650px] w-full grid place-content-center">
+
+      <div class="h-full max-w-8xl text-center w-full">
+        <div class="grid gap-8">
           <h1 class="font-bold text-6xl">
             Desarrolladora de videojuegos
           </h1>
@@ -58,33 +59,35 @@
           <p>
             Transformá tu visión en un juego exitoso. Hablemos hoy.
           </p>
-  
-          <a href="#contacto" class="border border-dark-blue rounded bg-orange text-black font-semibold w-fit px-8 py-2 m-auto cursor-pointer hover:scale-105 hover:bg-orange/80 transition-all">
+          
+          <a href="#contacto" class="border border-orange/50 rounded bg-dark-orange text-white font-bold w-fit m-auto px-6 py-3  cursor-pointer hover:bg-dark-orange/80 transition-colors">
             Contáctenos
           </a>
         </div>
-  
-        <div class="absolute bottom-10 rounded bg-black text-white px-16 py-4 grid gap-2 place-items-center">
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2  bg-dark-blue text-white px-16 py-4">
           <div class="flex gap-12">
-            <div class=""> 
-              Calidad?
-            </div>
-  
             <div class="">
-              Compromiso?
+              <p>Calidad</p>
             </div>
-  
+
             <div class="">
-              Atencion?
+              <p>Compromiso</p>
+            </div>
+
+            <div class="">
+              <p>Atención </p>
             </div>
           </div>
         </div>
       </div>
+
     </section>
 
     <div id="sections" class="relative font-poppins">
       <div class="bg-subheader absolute top-0 bg-dark-blue h-12 w-full">
       </div>
+
       <div class="sub-header z-10 text-sm sticky top-18 rounded bg-dark-blue/50 backdrop-blur max-w-2xl w-full m-auto h-12 flex justify-center items-center">
         <nav>
           <ul class="flex gap-12 text-white">
@@ -96,7 +99,7 @@
       </div>
       
       <section id="conocenos" class="section bg-[url(/src/assets/bg-conocenos.jpg)] bg-cover bg-no-repeat bg-fixed">
-        <div class="bg-conocenos backdrop-blur bg-dark-blue h-full w-full grid place-items-center">
+        <div class="bg-conocenos backdrop-blur bg-dark-blue/50 h-full w-full grid place-items-center">
           <div class="w-full max-w-8xl flex justify-center items-center p-8 gap-8">
             <div class="image">
               <img src="src/assets/logo-claro-BS.jpeg" alt="img-benteveo" class="h-full max-h-[500px] aspect-square" draggable="false">
@@ -119,15 +122,18 @@
                 </p>
               </div>
               
-              <a href="#" class="button px-8 py-2 border border-black hover:border-white">
+              <a href="#" class="w-fit px-8 py-2 border border-black flex items-center gap-1">
                 Saber más
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" >
+                  <path d="M11 3 3 3 3 11 5 11 5 6.41 11.29 12.71 12.71 11.29 6.41 5 11 5 11 3z"></path><path d="m3,19c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V5c0-1.1-.9-2-2-2h-6v2h6v14H5v-6h-2v6Z"></path>
+                </svg>
               </a>
             </div>
           </div>
         </div>
       </section>
-      
-      <section id="servicios" class="section bg-white text-default py-24">
+
+      <section id="servicios" class="section bg-gray-100 text-default py-24">
         <div class="w-full max-w-8xl h-full flex justify-between">
           <div class="info h-full">
             <h1 class="text-8xl text-black font-semibold mb-4">
@@ -166,7 +172,7 @@
         </div>
       </section>
   
-      <section id="contacto" class="section bg-gradient-to-br from-violet-600 via-blue-400 to-green-300 py-24 px-9">
+      <section id="contacto" class="section bg-gradient-to-br from-violet-300 via-blue-200 to-green-100 py-24 px-9">
         <form action="" class="w-full max-w-xl text-sm text-black grid gap-4">
           <h1 class="font-semibold uppercase text-3xl text-center mb-4">
             Contactanos
