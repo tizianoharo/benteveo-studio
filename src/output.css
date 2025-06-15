@@ -9,19 +9,22 @@
   --font-poppins: 'Poppins', serif;
   --color-default: #1a1a1a;
   --color-default-bg: #f3f4f6;
-  --color-orange: #e4a736;
-  --color-dark-orange: #e5a01f;
+  --color-orange: #e5a42b;
   --color-dark-blue: #000c2b;
   --color-mid-green: #29765b;
   --container-8xl: 1440px;
+  --animate-change-color: change-color 3s infinite alternate;
+  --animate-transform-header: change-header 1s forwards;
   --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+  --color-red-500: oklch(63.7% 0.237 25.331);
   --color-green-100: oklch(96.2% 0.044 156.743);
   --color-blue-200: oklch(88.2% 0.059 254.128);
   --color-violet-300: oklch(81.1% 0.111 293.571);
-  --color-gray-100: oklch(96.7% 0.003 264.542);
+  --color-gray-300: oklch(87.2% 0.01 258.338);
+  --color-gray-400: oklch(70.7% 0.022 261.325);
   --color-gray-900: oklch(21% 0.034 264.665);
   --color-black: #000;
   --color-white: #fff;
@@ -29,11 +32,14 @@
   --container-xl: 36rem;
   --container-2xl: 42rem;
   --container-3xl: 48rem;
+  --container-6xl: 72rem;
   --container-7xl: 80rem;
   --text-xs: 0.75rem;
   --text-xs--line-height: calc(1 / 0.75);
   --text-sm: 0.875rem;
   --text-sm--line-height: calc(1.25 / 0.875);
+  --text-lg: 1.125rem;
+  --text-lg--line-height: calc(1.75 / 1.125);
   --text-xl: 1.25rem;
   --text-xl--line-height: calc(1.75 / 1.25);
   --text-2xl: 1.5rem;
@@ -46,28 +52,44 @@
   --text-6xl--line-height: 1;
   --text-8xl: 6rem;
   --text-8xl--line-height: 1;
+  --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-black: 900;
   --tracking-tighter: -0.05em;
   --tracking-widest: 0.1em;
+  --radius-xs: 0.125rem;
+  --animate-bounce: bounce 1s infinite;
   --default-transition-duration: 150ms;
   --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --default-font-family: var(--font-sans);
   --default-mono-font-family: var(--font-mono);
 }
-@layer {
+@layer components {
+  .aptitude {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(var(--spacing) * 2);
+    overflow: hidden;
+    background-color: color-mix(in srgb, #000c2b 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-dark-blue) 50%, transparent);
+    }
+    color: var(--color-white);
+  }
   .section {
     display: grid;
     height: 100svh;
     max-height: 700px;
     width: 100%;
     scroll-snap-align: center;
-    scroll-margin-top: calc(var(--spacing) * 16);
+    scroll-margin-top: calc(var(--spacing) * 14);
     place-items: center;
-    background-color: var(--color-dark-blue);
-    color: var(--color-white);
+    color: var(--color-black);
   }
   .button {
     margin: auto;
@@ -92,38 +114,9 @@
     gap: calc(var(--spacing) * 1);
   }
 }
-@keyframes show-section {
-  to {
-    background-color: #000c2bb1;
-  }
-}
-@keyframes change-color {
-  0% {
-    color: red;
-  }
-  50% {
-    color: blue;
-  }
-  100% {
-    color: yellow;
-  }
-}
-@keyframes change-header {
-  0% {
-    border: solid 1px transparent;
-  }
-  100% {
-    border-bottom: solid 1px rgba(0, 0, 0, 0.259);
-    padding: 12px 0;
-  }
-}
-.info h1 span svg {
-  animation: change-color 3s infinite alternate;
-}
 header {
-  animation: change-header 1s forwards;
   animation-timeline: scroll();
-  animation-range: 10% 20%;
+  animation-range: 18% 25%;
 }
 @layer theme, base, components, utilities;
 @layer theme;
@@ -276,6 +269,9 @@ header {
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
   }
@@ -288,6 +284,15 @@ header {
   .top-18 {
     top: calc(var(--spacing) * 18);
   }
+  .right-10 {
+    right: calc(var(--spacing) * 10);
+  }
+  .-bottom-1 {
+    bottom: calc(var(--spacing) * -1);
+  }
+  .-bottom-1\/2 {
+    bottom: calc(calc(1/2 * 100%) * -1);
+  }
   .bottom-10 {
     bottom: calc(var(--spacing) * 10);
   }
@@ -297,8 +302,20 @@ header {
   .left-1\/2 {
     left: calc(1/2 * 100%);
   }
+  .-z-20 {
+    z-index: calc(20 * -1);
+  }
   .z-10 {
     z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
+  .z-30 {
+    z-index: 30;
+  }
+  .z-100 {
+    z-index: 100;
   }
   .m-auto {
     margin: auto;
@@ -306,11 +323,17 @@ header {
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
   .mb-6 {
     margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
   }
   .flex {
     display: flex;
@@ -327,11 +350,11 @@ header {
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
-  .h-\[85svh\] {
-    height: 85svh;
-  }
   .h-full {
     height: 100%;
+  }
+  .h-svh {
+    height: 100svh;
   }
   .max-h-32 {
     max-height: calc(var(--spacing) * 32);
@@ -339,8 +362,8 @@ header {
   .max-h-\[500px\] {
     max-height: 500px;
   }
-  .max-h-\[650px\] {
-    max-height: 650px;
+  .max-h-\[700px\] {
+    max-height: 700px;
   }
   .min-h-28 {
     min-height: calc(var(--spacing) * 28);
@@ -348,11 +371,20 @@ header {
   .min-h-svh {
     min-height: 100svh;
   }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-\[400vw\] {
+    width: 400vw;
+  }
   .w-fit {
     width: fit-content;
   }
   .w-full {
     width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
   }
   .max-w-1 {
     max-width: calc(var(--spacing) * 1);
@@ -365,6 +397,9 @@ header {
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
+  }
+  .max-w-6xl {
+    max-width: var(--container-6xl);
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
@@ -395,6 +430,18 @@ header {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .animate-bounce {
+    animation: var(--animate-bounce);
+  }
+  .animate-change-color {
+    animation: var(--animate-change-color);
+  }
+  .animate-transform-header {
+    animation: var(--animate-transform-header);
+  }
   .cursor-pointer {
     cursor: pointer;
   }
@@ -404,14 +451,14 @@ header {
   .snap-start {
     scroll-snap-align: start;
   }
+  .scroll-mt-2 {
+    scroll-margin-top: calc(var(--spacing) * 2);
+  }
   .grid-cols-\[repeat\(auto-fit\,minmax\(250px\,1fr\)\)\] {
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   }
   .flex-col {
     flex-direction: column;
-  }
-  .place-content-center {
-    place-content: center;
   }
   .place-items-center {
     place-items: center;
@@ -428,11 +475,17 @@ header {
   .gap-1 {
     gap: calc(var(--spacing) * 1);
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
   }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
@@ -443,8 +496,17 @@ header {
   .gap-12 {
     gap: calc(var(--spacing) * 12);
   }
+  .overflow-hidden {
+    overflow: hidden;
+  }
   .rounded {
     border-radius: 0.25rem;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-xs {
+    border-radius: var(--radius-xs);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -465,14 +527,23 @@ header {
       border-color: color-mix(in oklab, var(--color-black) 80%, transparent);
     }
   }
+  .border-default-bg {
+    border-color: var(--color-default-bg);
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
+  .border-gray-400 {
+    border-color: var(--color-gray-400);
+  }
   .border-orange {
     border-color: var(--color-orange);
   }
-  .border-orange\/50 {
-    border-color: color-mix(in srgb, #e4a736 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-orange) 50%, transparent);
-    }
+  .border-red-500 {
+    border-color: var(--color-red-500);
+  }
+  .border-white {
+    border-color: var(--color-white);
   }
   .bg-dark-blue {
     background-color: var(--color-dark-blue);
@@ -483,23 +554,23 @@ header {
       background-color: color-mix(in oklab, var(--color-dark-blue) 50%, transparent);
     }
   }
-  .bg-dark-orange {
-    background-color: var(--color-dark-orange);
-  }
-  .bg-default {
-    background-color: var(--color-default);
-  }
   .bg-default-bg {
     background-color: var(--color-default-bg);
-  }
-  .bg-gray-100 {
-    background-color: var(--color-gray-100);
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
   .bg-mid-green {
     background-color: var(--color-mid-green);
+  }
+  .bg-orange {
+    background-color: var(--color-orange);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .bg-gradient-to-br {
     --tw-gradient-position: to bottom right in oklab;
@@ -536,6 +607,9 @@ header {
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -551,11 +625,17 @@ header {
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
   .px-9 {
     padding-inline: calc(var(--spacing) * 9);
+  }
+  .px-10 {
+    padding-inline: calc(var(--spacing) * 10);
   }
   .px-16 {
     padding-inline: calc(var(--spacing) * 16);
@@ -568,9 +648,6 @@ header {
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
-  }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -613,6 +690,10 @@ header {
     font-size: var(--text-8xl);
     line-height: var(--tw-leading, var(--text-8xl--line-height));
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
@@ -625,9 +706,17 @@ header {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -658,17 +747,31 @@ header {
   .text-default {
     color: var(--color-default);
   }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
   .text-orange {
     color: var(--color-orange);
   }
   .text-white {
     color: var(--color-white);
   }
+  .capitalize {
+    text-transform: capitalize;
+  }
   .uppercase {
     text-transform: uppercase;
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .shadow-circle {
+    --tw-shadow: 0 0 10px 3px var(--tw-shadow-color, #87878749);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -692,16 +795,6 @@ header {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-dark-blue);
-      }
-    }
-  }
-  .hover\:bg-dark-orange\/80 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: color-mix(in srgb, #e5a01f 80%, transparent);
-        @supports (color: color-mix(in lab, red, red)) {
-          background-color: color-mix(in oklab, var(--color-dark-orange) 80%, transparent);
-        }
       }
     }
   }
@@ -738,6 +831,26 @@ header {
   syntax: "*";
   inherits: false;
   initial-value: 0;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -790,6 +903,71 @@ header {
   syntax: "*";
   inherits: false;
 }
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
@@ -831,6 +1009,38 @@ header {
   syntax: "*";
   inherits: false;
 }
+@keyframes change-color {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: yellow;
+  }
+}
+@keyframes change-header {
+  0% {
+    background-color: transparent;
+    border: solid 1px transparent;
+  }
+  100% {
+    background-color: var(--color-default-bg);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.259);
+    padding: 12px 0;
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -838,6 +1048,11 @@ header {
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
       --tw-gradient-from: #0000;
@@ -849,6 +1064,20 @@ header {
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
       --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
