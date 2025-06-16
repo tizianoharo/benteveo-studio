@@ -13,17 +13,16 @@
 
   /* Colors */
   --color-default: #1a1a1a;
-  --color-default-bg: #f3f4f6;
+  --color-default-light: #f3f4f6;
+  --color-default-dark: #151515;
   --color-orange-light: #e1d2b6;
   --color-orange: #e5a42b;
   --color-max-orange: #ffa600;
   --color-mid-blue: #081538; 
-  --color-dark-blue: #000c2b;
+  --color-dark-blue: #000921;
   --color-mid-green: #29765b;
-  --color-separation-block: #e3e4ed;
-  --color-low-gray: #f5f5f6;
 
-  --shadow-circle: 0 0 10px 3px #87878749;
+  --shadow-circle: 0 0 10px 3px #0000009b;
 
   --container-8xl: 1440px;
 
@@ -43,17 +42,17 @@
     }
   }
 
-  @keyframes change-header {
-    0% {
-      background-color: transparent;
-      border: solid 1px transparent;
-    }
+}
+@keyframes change-header {
+  0% {
+    background-color: transparent;
+    border: solid 1px transparent;
+  }
 
-    100% {
-      background-color: var(--color-default-bg);
-      border-bottom: solid 1px rgba(0, 0, 0, 0.259);
-      padding: 12px 0;
-    }
+  100% {
+    background-color: var(--color-default-light);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.259);
+    padding: 12px 0;
   }
 }
 
@@ -63,11 +62,11 @@
   }
 
   .section {
-    @apply w-full h-svh max-h-[700px] text-black snap-center scroll-mt-14 grid place-items-center;
+    @apply w-full h-svh max-h-[700px] scroll-mt-14 grid place-items-center;
   }
 
   .button {
-    @apply bg-black text-white font-semibold w-fit m-auto cursor-pointer hover:bg-transparent transition-colors;
+    @apply bg-default-dark font-bold cursor-pointer hover:bg-default-light transition-colors;
   }
 
   .field-form {
@@ -77,7 +76,7 @@
 
 header {
   animation-timeline: scroll();
-  animation-range: 18% 25%;
+  animation-range: 10% 20%;
 }
 
 @import "tailwindcss"

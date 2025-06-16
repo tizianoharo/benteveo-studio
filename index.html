@@ -9,7 +9,7 @@
   <title>Benteveo Studio</title>
 </head>
   
-<body class="min-h-svh flex flex-col text-default font-manrope bg-default-bg">
+<body class="min-h-svh flex flex-col text-default font-manrope bg-default-light">
   <header class="z-100 bg-transparent fixed top-0 max-w-screen w-full px-6 text-sm py-5 animate-transform-header">
     <div class="max-w-6xl m-auto flex items-center justify-between">
       <div class="logo flex items-center gap-4">
@@ -49,23 +49,23 @@
   <main id="home">
     <section id="hero" class="z-10 relative bg-white h-svh max-h-[700px] w-full grid place-items-center overflow-hidden">  
       <div class="hero-content max-w-8xl w-full text-center p-2">
-        <div class="z-30 info w-full">
-          <h1 class="text-6xl text-dark-blue uppercase font-bold grid">
+        <div class="z-30 info w-full ">
+          <h1 class="text-6xl mb-2 text-dark-blue uppercase font-bold grid">
             <span class="text-sm text-gray-400 capitalize">Somos una...</span>
             Desarrolladora de videojuegos
           </h1>
 
-          <p class="text-lg font-light mt-5 mb-12">
-            Transforma tu vision en un juego exitoso. Solo <span class="font-bold    text-dark-blue">llamenos</span>
+          <p class="text-lg text-default-light font-light mt-6 mb-12">
+            Transforma tu vision en un juego exitoso. Solo <span class="font-bold">llamenos</span>
           </p>
 
-          <a href="#contacto" class=" text-black border border-gray-300 shadow-lg font-black px-7 py-3 cursor-pointer hover:bg-dark-blue hover:text-white transition-colors">
+          <a href="#contact" class="button text-default-light border border-default-light px-8 py-3 hover:text-default-dark">
             Contactanos
           </a>
         </div>
 
-        <div class="-z-20 circle-content absolute -bottom-1/2 bg-transparent left-1/2 -translate-x-1/2 h-full w-screen">
-          <div class="circle shadow-circle aspect-square w-[400vw] rounded-full bg-default-bg border border-gray-300 absolute top-0 left-1/2 -translate-x-1/2">
+        <div class="-z-20 circle-content absolute -bottom-[48%] bg-transparent left-1/2 -translate-x-1/2 h-full w-screen">
+          <div class="circle shadow-circle aspect-square w-[400vw] rounded-full bg-default-dark border border-default absolute top-0 left-1/2 -translate-x-1/2">
           </div>
         </div>
         
@@ -92,57 +92,53 @@
           </div>
         </div>  -->
       </div>
+
       <a href="#sections" class="z-100 bg-orange absolute aspect-square w-12 bottom-10 right-10 grid gap-2 place-items-center justify-center rounded-full cursor-pointer animate-bounce">
-          <svg width="25" height="25" fill="#fff" viewBox="0 0 24 24" >
-            <path d="m4.19,14.16l5.81.73v4.12c0,1.65,1.35,3,3,3s3-1.35,3-3v-9.38l.58.29c1.58.79,3.5.28,4.48-1.19l.22-.33c.3-.44.4-.98.3-1.5-.1-.52-.41-.98-.85-1.27l-5.17-3.45c-.16-.11-.36-.17-.55-.17H3c-.55,0-1,.45-1,1v8.68c0,1.26.94,2.32,2.19,2.48Zm-.19-10.16h10.7l4.92,3.28-.22.33c-.42.63-1.24.85-1.92.51l-2.03-1.01c-.31-.15-.68-.14-.97.04-.29.18-.47.5-.47.85v11c0,.55-.45,1-1,1s-1-.45-1-1v-5c0-.5-.38-.93-.88-.99l-6.69-.84c-.25-.03-.44-.24-.44-.5v-7.68Z"></path>
-          </svg>
-        </a>
+        <svg width="25" height="25" fill="#fff" viewBox="0 0 24 24" >
+          <path d="m4.19,14.16l5.81.73v4.12c0,1.65,1.35,3,3,3s3-1.35,3-3v-9.38l.58.29c1.58.79,3.5.28,4.48-1.19l.22-.33c.3-.44.4-.98.3-1.5-.1-.52-.41-.98-.85-1.27l-5.17-3.45c-.16-.11-.36-.17-.55-.17H3c-.55,0-1,.45-1,1v8.68c0,1.26.94,2.32,2.19,2.48Zm-.19-10.16h10.7l4.92,3.28-.22.33c-.42.63-1.24.85-1.92.51l-2.03-1.01c-.31-.15-.68-.14-.97.04-.29.18-.47.5-.47.85v11c0,.55-.45,1-1,1s-1-.45-1-1v-5c0-.5-.38-.93-.88-.99l-6.69-.84c-.25-.03-.44-.24-.44-.5v-7.68Z"></path>
+        </svg>
+      </a>
     </section>
 
     <div id="sections" class="scroll-mt-2 relative font-poppins">
-      <div class="bg-subheader absolute top-0 bg-dark-blue h-12 w-full">
+      <div class="bg-subheader absolute top-0 bg-gradient-to-b from-default-dark to-default h-12 w-full">  
       </div>
-
-      <div class="sub-header z-10 text-sm sticky top-18 rounded bg-dark-blue/50 backdrop-blur max-w-2xl w-full m-auto h-12 flex justify-center items-center">
+      <div class="sub-header bg-gradient-to-b from-default-dark/75 to-default/75 backdrop-blur sticky top-16 text-sm rounded-xl max-w-2xl w-full m-auto h-12 flex justify-center items-center">
         <nav>
-          <ul class="flex gap-12 text-white">
-            <li><a href="#conocenos">Conócenos</a></li>
+          <ul class="flex gap-16 text-default-light font-semibold">
+            <li><a href="#about-us">Conócenos</a></li>
 
-            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#services">Servicios</a></li>
             
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contact">Contacto</a></li>
           </ul>
         </nav>
       </div>
       
-      <section id="conocenos" class="section text-white bg-[url(/src/assets/bg-conocenos.jpg)] bg-cover bg-no-repeat bg-fixed">
-        <div class="bg-conocenos backdrop-blur bg-dark-blue/50 h-full w-full grid place-items-center">
+      <section id="about-us" class="section bg-default text-white">
+        <div class="h-full w-full grid place-items-center">
           <div class="w-full max-w-8xl flex justify-center items-center p-8 gap-8">
-            <div class="image">
-              <img src="src/assets/logo-claro-BS.jpeg" alt="img-benteveo" class="h-full max-h-[500px] aspect-square" draggable="false">
-            </div>
-
-            <div class="content max-w-3xl p-4 text-left grid gap-6"> 
-              <h1 class="text-5xl font-bold">
+            <div class="content p-4 text-left grid gap-6"> 
+              <h1 class="text-6xl font-bold">
                 Acerca de nosotros
               </h1>
               
-              <div class="grid gap-4 mb-6 text-sm">
+              <div class="grid gap-4 mb-6 text-lg">
                 <p>
-                  Somos una startup dedicada al desarrollo de videojuegos que convierte ideas en experiencias interactivas únicas. Acompañamos a creadores y emprendedores en cada etapa del proceso, desde la conceptualización hasta el lanzamiento, para que tu juego no solo se desarrolle, sino que destaque en el mercado.
+                  En Benteveo Studio, nos dedicamos al desarrollo de videojuegos con foco en la innovación y la creatividad. Nuestro objetivo es crear juegos que diviertan, atrapen y dejen una marca en quienes los juegan. Nos gusta imaginar mundos, personajes e historias que conecten con las personas.
                 </p>
                 <p>
-                  Nos especializamos en el diseño y desarrollo de videojuegos para distintas plataformas, combinando creatividad, tecnología de vanguardia y estrategias de publicación efectivas para impulsar el alcance y el éxito de cada proyecto.
+                  Tenemos un equipo que disfruta lo que hace y trabaja para transformar ideas en experiencias únicas. Buscamos que cada juego se adapte a lo que esperan los jugadores de hoy, usando tecnologías modernas y soluciones que permitan crecer y mejorar con el tiempo.
                 </p>
                 <p>
                   Si tenés una idea para un videojuego, nosotros te ayudamos a transformarla en una experiencia jugable y lista para brillar.
                 </p>
               </div>
               
-              <a href="#" class="w-fit px-8 py-2 border border-black flex items-center gap-1">
+              <a href="#" class="button w-fit bg-default text-default-light border border-default-light px-8 py-3 flex items-center gap-2 hover:text-default-dark hover:bg-default-light">
                 Saber más
-                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" >
-                  <path d="M11 3 3 3 3 11 5 11 5 6.41 11.29 12.71 12.71 11.29 6.41 5 11 5 11 3z"></path><path d="m3,19c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V5c0-1.1-.9-2-2-2h-6v2h6v14H5v-6h-2v6Z"></path>
+                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24" >
+                  <path d="M12.71 12.71 18.21 7.21 21 10 21 3 14 3 16.79 5.79 11.29 11.29 12.71 12.71z"></path><path d="m11,5v-2h-6c-1.1,0-2,.9-2,2v14c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2v-6h-2v6H5V5h6Z"></path>
                 </svg>
               </a>
             </div>
@@ -150,7 +146,7 @@
         </div>
       </section>
 
-      <section id="servicios" class="section text-default py-24">
+      <section id="services" class="section text-default py-24">
         <div class="w-full max-w-8xl h-full flex justify-between">
           <div class="info h-full">
             <h1 class="text-8xl text-black font-semibold mb-4">
@@ -197,7 +193,7 @@
         </div>
       </section>
   
-      <section id="contacto" class="section bg-gradient-to-br from-violet-300 via-blue-200 to-green-100 py-24 px-9">
+      <section id="contact" class="section bg-gradient-to-br from-violet-300 via-blue-200 to-green-100 py-24 px-9">
         <form action="" class="w-full max-w-xl text-sm text-black grid gap-4">
           <h1 class="font-semibold uppercase text-3xl text-center mb-4">
             Contactanos
